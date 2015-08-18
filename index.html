@@ -23,16 +23,16 @@
     <meta name="twitter:image:src" content="http://www.presidentio.com/img/avatar.jpg">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Presidentio Portfolio" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="http://www.presidentio.com/" />
-    <meta property="og:image" content="http://www.presidentio.com/img/avatar.jpg" />
-    <meta property="og:description" content="Presidentio Portfolio" />
-    <meta property="og:site_name" content="Presidentio Portfolio" />
-    <meta property="article:published_time" content="2014-01-01T00:00:00+02:00" />
-    <meta property="article:section" content="Portfolio" />
-    <meta property="article:tag" content="Portfolio" />
-    <meta property="fb:admins" content="vitaliy.gergely" />
+    <meta property="og:title" content="Presidentio Portfolio"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://www.presidentio.com/"/>
+    <meta property="og:image" content="http://www.presidentio.com/img/avatar.jpg"/>
+    <meta property="og:description" content="Presidentio Portfolio"/>
+    <meta property="og:site_name" content="Presidentio Portfolio"/>
+    <meta property="article:published_time" content="2014-01-01T00:00:00+02:00"/>
+    <meta property="article:section" content="Portfolio"/>
+    <meta property="article:tag" content="Portfolio"/>
+    <meta property="fb:admins" content="vitaliy.gergely"/>
 
     <title>Presidentio</title>
 
@@ -73,6 +73,20 @@
         ga('create', 'UA-64112096-1', 'auto');
         ga('send', 'pageview');
 
+    </script>
+
+    <script>
+        (function (b, o, i, l, e, r) {
+            b[l] || (b[l] =
+                    function (adUnitId, bannerId) {
+                        (b[l].q = b[l].q || []).push({"adUnitId": adUnitId, "bannerId": bannerId})
+                    });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'http://home.presidentio.com:8080/ssp.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ps'));
     </script>
 
 </head>
@@ -405,6 +419,10 @@ document.write("<div style='display: none'>");
             <div class="col-md-4 section-heading">
                 <span class="copyright">Copyright &copy; Vitaliy Gergel Website 2014</span>
             </div>
+            <div id="ad-banner-footer" class="col-md-4"></div>
+            <script>
+                ps('adUnitId', 'ad-banner');
+            </script>
         </div>
     </div>
 </footer>
